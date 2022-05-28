@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6f2f9d15-0998-45b5-95d7-bd44dd9a3e59}</ProjectGuid>
-    <RootNamespace>ktoydemo</RootNamespace>
+    <ProjectGuid>{26d1e49f-bbb6-4dec-a794-4f3074891f1d}</ProjectGuid>
+    <RootNamespace>irbdemo</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -137,21 +137,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ast.cpp" />
-    <ClCompile Include="lex.cpp" />
+    <ClCompile Include="funcmk.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="parser.cpp" />
-    <ClCompile Include="toy.cpp" />
+    <ClCompile Include="modmk.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ast.h" />
-    <ClInclude Include="err.h" />
-    <ClInclude Include="lex.h" />
-    <ClInclude Include="parser.h" />
-    <ClInclude Include="toy.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="1.toy" />
+    <ClInclude Include="modmk.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
