@@ -50,18 +50,27 @@ int make_module() {
     // Output the bitcode file to stdout
     // WriteBitcodeToFile(*M, outs());
     
-    //M->dropAllReferences();
-    //M->dropTriviallyDeadConstantArrays();
-    for (auto& f: M->getFunctionList()) {
-        outs() << f.getName() << "\n\n";
-    }
-    F->removeFromParent();
-    //M->getFunctionList().clear();
-    // F->eraseFromParent();
     outs() << "\n\n----------------------\n\n";
     M->print(outs(), nullptr);
 
     // Delete the module and all of its contents.
+    
+    // 可能是这版本的 bug ，需要手动 removeFromParent 模块定义的函数。
+    M->dropAllReferences();
+    F->removeFromParent();
+    // F->eraseFromParent(); // 官方示例使用，但是报错，不可用。
+    // delete F; // 删除不可用
+    // 下面的循环不可用，必须自己管理函数对象。
+    /*
+    for (auto& f : M->getFunctionList()) {
+        outs() << f.getName() << " delete\n\n";
+        f.removeFromParent();
+    }
+    */
+    
+
+
     delete M;
+    delete &Context;
     return 0;
 }

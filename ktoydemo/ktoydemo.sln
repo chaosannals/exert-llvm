@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ktoydemo", "ktoydemo\ktoyde
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "irbdemo", "irbdemo\irbdemo.vcxproj", "{26D1E49F-BBB6-4DEC-A794-4F3074891F1D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kt9demo", "kt9demo\kt9demo.vcxproj", "{15AECD6A-9D6D-4617-A7A5-F3B5A933F93A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{26D1E49F-BBB6-4DEC-A794-4F3074891F1D}.Release|x64.Build.0 = Release|x64
 		{26D1E49F-BBB6-4DEC-A794-4F3074891F1D}.Release|x86.ActiveCfg = Release|Win32
 		{26D1E49F-BBB6-4DEC-A794-4F3074891F1D}.Release|x86.Build.0 = Release|Win32
+		{15AECD6A-9D6D-4617-A7A5-F3B5A933F93A}.Debug|x64.ActiveCfg = Debug|x64
+		{15AECD6A-9D6D-4617-A7A5-F3B5A933F93A}.Debug|x64.Build.0 = Debug|x64
+		{15AECD6A-9D6D-4617-A7A5-F3B5A933F93A}.Debug|x86.ActiveCfg = Debug|Win32
+		{15AECD6A-9D6D-4617-A7A5-F3B5A933F93A}.Debug|x86.Build.0 = Debug|Win32
+		{15AECD6A-9D6D-4617-A7A5-F3B5A933F93A}.Release|x64.ActiveCfg = Release|x64
+		{15AECD6A-9D6D-4617-A7A5-F3B5A933F93A}.Release|x64.Build.0 = Release|x64
+		{15AECD6A-9D6D-4617-A7A5-F3B5A933F93A}.Release|x86.ActiveCfg = Release|Win32
+		{15AECD6A-9D6D-4617-A7A5-F3B5A933F93A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

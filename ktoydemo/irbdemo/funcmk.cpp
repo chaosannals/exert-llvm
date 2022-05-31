@@ -31,7 +31,7 @@ llvm::Function* defineFunc(llvm::IRBuilder<>* builder, llvm::Module* m) {
 	// c->print(llvm::errs());
 
 	builder->CreateRet(c);
-	// llvm::verifyFunction(*f);
+	llvm::verifyFunction(*f);
 	return f;
 }
 
@@ -41,11 +41,6 @@ int make_func() {
 	std::unique_ptr<llvm::IRBuilder<>> ir_builder = std::make_unique<llvm::IRBuilder<>>(*vm_context);
 
 	auto f = defineFunc(ir_builder.get(), vm_module.get());
-	std::cout << "start eraseFromParent" << std::endl;
-	//f->dropAllReferences();
-	//f->eraseFromParent();
-	f->removeFromParent();
-	std::cout << "end eraseFromParent" << std::endl;
 
 	vm_module->print(llvm::outs(), nullptr);
 
@@ -57,8 +52,10 @@ int make_func() {
 
 	di_builder->finalize();*/
 
-	//vm_module.release();
-	//vm_context.release();
+	for (auto& f : vm_module->getFunctionList()) {
+		f.removeFromParent();
+	}
+	
 	int aa;
 	std::cin >> aa;
 	return 0;
