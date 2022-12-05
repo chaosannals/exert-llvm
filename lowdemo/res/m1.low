@@ -1,0 +1,5 @@
+use stdio;
+
+let main = { args: array<string> ->
+	println("hello {}", 123);
+};
