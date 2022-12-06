@@ -11,7 +11,7 @@ int main() {
 	auto lexemes = lexer.lex();
 
 	for (auto lexeme : lexemes) {
-		std::cout << lexeme.token << std::endl;
+		std::cout << '[' << lexeme.token << ']' << lexeme.content << std::endl;
 	}
 
 	std::cin.get();

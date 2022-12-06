@@ -21,7 +21,7 @@ target_sources(
 	lowc
 	PRIVATE
 	"src/main.cpp"
- "src/lex.h")
+ "src/lex.h" "src/parse.h" "src/lex.cpp")
 
 file(COPY ${RES_DIR} DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CONFIGURATION_TYPES}")
 message(STATUS "copy ${RES_FILES}")
